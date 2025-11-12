@@ -37,26 +37,50 @@
             <fieldset>
                 <legend>Customer Information</legend>
             <label>
-                First Name<input type="text" name="fname" required> <b>*</b>
+                First Name*<input type="text" name="fname" required> <b></b>
             </label>
 
             <label>
-                Last Name<input type="text" name="lname" required> <b>*</b>
+                Last Name*<input type="text" name="lname" required> <b></b>
             </label>
 
              <label>
-                Cell Phone<input type="tel" name="phone" required> <b>*</b>
+                Cell Phone*<input type="tel" name="phone" required placeholder="987-555-1234"> <b></b>
             </label>
 
                 <label>
-                Email<input type="email" name="email" required> <b>*</b>
+                Email*<input type="email" name="email" required> <b></b>
             </label>
             </fieldset>
 
             <fieldset>
                 <legend> Delivery Method</legend>
-                <input type="radio" name="method" value="drone">
+                <label>><input type="radio" name="method" value="drone">Drone Delivery (2hrs)</label>
+                <label><input type="radio" name="method" value="motor">Motorcycle (4hrs)</label>
+                <label><input type="radio" name="method" value="bot">Robot Delivery (6hrs)</label>
             </fieldset>
+
+            <fieldset>
+                <legend>Delivery Options</legend>
+                <label><input type="checkbox" name="porch" value="selection"> Front Porch</label>
+                <label><input type="checkbox" name="deck" value="selection"> Back Deck</label>
+                <label><input type="checkbox" name="driveway" value="selection"> Driveway</label>
+                <label><input type="checkbox" name="garage" value="selection"> Garage</label>
+
+                <select name="time">
+                    <label>
+                        <option value="none">Please Select</option>
+                        <option value="morning">7:00am-11:00am</option>
+                        <option value="noon">11:00am-2:00pm</option>
+                        <option value="afternoon">2:00pm-5:00pm</option>
+                        <option value="evening">5:00pm-8:00pm</option>
+                    </label>
+                </select>
+            </fieldset>
+
+            <label>Comments
+                <textarea name="comments">Please add any special instructions.</textarea>
+            </label>
 
             <input type="submit" value="Send Delivery request">
         </form>
